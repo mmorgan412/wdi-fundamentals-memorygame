@@ -54,6 +54,16 @@ function createBoard(){
 	}
 };
 
-createBoard();
+function resetCards(){
+	for (var x=0; x< cards.length; x++){
+		var imgage = document.getElementsByTagName("img")[x].setAttribute("src", "images/back.png");
+	}
+}
 
+function resetButton(){
+	document.getElementById('reset').addEventListener('click', resetCards)
+}
+
+createBoard();
+resetButton();
 
